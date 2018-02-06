@@ -25,11 +25,13 @@ Route::get('/', function () {
 //Authentication Routes
 //Route::get('auth/login', 'Auth\LoginController@getLogin');
 //Route::get('auth/login', 'Auth\LoginController@postLogin');
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+//Route::get('login', 'Auth\LoginController@login');
+Route::get('logout', 'Auth\LoginController@logout');
 
 //Registration Routes
 //Route::get('auth/register', 'Auth\RegisterController@getRegister');
 //Route::get('auth/register', 'Auth\RegisterController@postRegister');
+//Route::get('register', 'Auth\RegisterController@register');
 
 Route::get('contact','PagesController@getContact');
 Route::get('about','PagesController@getAbout');
