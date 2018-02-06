@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Laravel Blog</a>
+      <a class="navbar-brand" href="">Laravel Blog</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,6 +23,7 @@
 
       <ul class="nav navbar-nav navbar-right">
 
+        <!-- verificar se o utilizador está loggado -->
         @if(Auth::check())
           <li class="dropdown">
             <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello {{ Auth::user()->name }} <span class="caret"></span></a>
