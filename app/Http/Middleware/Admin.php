@@ -3,15 +3,11 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Contracts\Auth\Guard;
+//suse Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
 
 class Admin
 {
-    protected $auth;
-     public function __construct(Guard $auth)
-     {
-         $this->auth = $auth;
-     }
     /**
      * Handle an incoming request.
      *
@@ -21,7 +17,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-      if ( $this->auth->check() && $this->auth->user()->isAdmin() )
+      if ( Auth::check() && Auth::user()->isAdmin() )
       {
           return $next($request);
       }
