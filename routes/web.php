@@ -40,3 +40,5 @@ Route::resource('posts','PostController');
 
 Route::auth();
 //Auth::routes();
+
+Route::resource('users','UserController');
